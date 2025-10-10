@@ -9,6 +9,7 @@ namespace Buoi03_Bai_9
 
         private void btnHien_Click(object sender, EventArgs e)
         {
+            groupBox1.Text="test";
             string Gioitinh = "";
             string TinhTrang = "";
             string Hoten = txtTen.Text;
