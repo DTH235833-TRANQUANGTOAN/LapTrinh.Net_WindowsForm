@@ -137,11 +137,6 @@
             Array.Reverse(a, 0, SoPT); // Đảo ngược mảng để được mảng giảm dần
         }
 
-
-
-
-
-
         // LOAD VÀ BUTTON
 
         int SoPT = 0;
