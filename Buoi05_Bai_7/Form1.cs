@@ -27,7 +27,7 @@ namespace Buoi05_Bai_7
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            if (flag == false)
+            if (flag == false) // lan dau thuc hien thi nhap du lieu
             {
                 Nhap();
                 flag = true;
