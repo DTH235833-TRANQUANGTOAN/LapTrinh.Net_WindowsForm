@@ -64,6 +64,7 @@
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("この人は化け物です。");
             Application.Exit();
         }
     }
