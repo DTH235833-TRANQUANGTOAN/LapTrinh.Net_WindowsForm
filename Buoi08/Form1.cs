@@ -20,43 +20,57 @@
 
         private void rb1_CheckedChanged(object sender, EventArgs e)
         {
-            txtBanKinh.Clear();
-            txtDai.Clear();
-            txtRong.Clear();
-            txtCanh.Clear();
-            txtCanh.Enabled = true;
-            txtBanKinh.Enabled = false;
-            txtDai.Enabled = false;
-            txtRong.Enabled = false;
+            check();
         }
 
         private void rb2_CheckedChanged(object sender, EventArgs e)
         {
-            txtBanKinh.Clear();
-            txtDai.Clear();
-            txtRong.Clear();
-            txtCanh.Clear();
-            txtCanh.Enabled = false;
-            txtBanKinh.Enabled = false;
-            txtDai.Enabled = true;
-            txtRong.Enabled = true;
-            txtDai.Focus();
+            check();
         }
 
         private void rb3_CheckedChanged(object sender, EventArgs e)
         {
-            txtBanKinh.Clear();
-            txtDai.Clear();
-            txtRong.Clear();
-            txtCanh.Clear();
-            txtCanh.Enabled = false;
-            txtBanKinh.Enabled = true;
-            txtDai.Enabled = false;
-            txtRong.Enabled = false;
-            txtBanKinh.Focus();
+            check();
         }
-
-        private void btnThucHien_Click(object sender, EventArgs e)
+        public void check()
+        {
+            if (rb1.Checked)
+            {
+                txtBanKinh.Clear();
+                txtDai.Clear();
+                txtRong.Clear();
+                txtCanh.Clear();
+                txtCanh.Enabled = true;
+                txtBanKinh.Enabled = false;
+                txtDai.Enabled = false;
+                txtRong.Enabled = false;
+            }
+            if (rb2.Checked)
+            {
+                txtBanKinh.Clear();
+                txtDai.Clear();
+                txtRong.Clear();
+                txtCanh.Clear();
+                txtCanh.Enabled = false;
+                txtBanKinh.Enabled = false;
+                txtDai.Enabled = true;
+                txtRong.Enabled = true;
+                txtDai.Focus();
+            }
+            if (rb3.Checked)
+            {
+                txtBanKinh.Clear();
+                txtDai.Clear();
+                txtRong.Clear();
+                txtCanh.Clear();
+                txtCanh.Enabled = false;
+                txtBanKinh.Enabled = true;
+                txtDai.Enabled = false;
+                txtRong.Enabled = false;
+                txtBanKinh.Focus();
+            }
+        }
+        public void TH()
         {
             if (rb1.Checked)
             {
@@ -110,11 +124,27 @@
                     f4.ShowDialog();
                 }
             }
+        }
 
+        private void btnThucHien_Click(object sender, EventArgs e)
+        {
+            TH();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Application.Exit(); 
+        }
+
+        private void menuThucHien_Click(object sender, EventArgs e)
+        {
+            TH();
+        }
+
+        private void menuThoat_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             Application.Exit();
         }
     }

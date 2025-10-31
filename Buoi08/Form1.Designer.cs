@@ -44,8 +44,12 @@
             label2 = new Label();
             btnThucHien = new Button();
             btnThoat = new Button();
+            menuStrip1 = new MenuStrip();
+            menuThucHien = new ToolStripMenuItem();
+            menuThoat = new ToolStripMenuItem();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -214,6 +218,30 @@
             btnThoat.UseVisualStyleBackColor = true;
             btnThoat.Click += btnThoat_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuThucHien, menuThoat });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(814, 33);
+            menuStrip1.TabIndex = 6;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // menuThucHien
+            // 
+            menuThucHien.Name = "menuThucHien";
+            menuThucHien.Size = new Size(104, 29);
+            menuThucHien.Text = "Thực hiện";
+            menuThucHien.Click += menuThucHien_Click;
+            // 
+            // menuThoat
+            // 
+            menuThoat.Name = "menuThoat";
+            menuThoat.Size = new Size(73, 29);
+            menuThoat.Text = "Thoát";
+            menuThoat.Click += menuThoat_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -225,7 +253,9 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
+            Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 12F);
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
@@ -234,6 +264,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -256,5 +288,8 @@
         private TextBox txtRong;
         private Button btnThucHien;
         private Button btnThoat;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuThucHien;
+        private ToolStripMenuItem menuThoat;
     }
 }
