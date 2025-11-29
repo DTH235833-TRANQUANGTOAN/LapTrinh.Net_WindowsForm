@@ -14,7 +14,7 @@ namespace Buoi11_BaiTap  // <--- Đã sửa thành Buoi11_BaiTap
     public partial class Form1 : Form
     {
         // Connection String: admin
-        private string connectionString = @"Data Source=PERSONAL-01;Initial Catalog=QLHS;Integrated Security=True";
+        private string connectionString = @"Data Source=admin;Initial Catalog=QLHS;Integrated Security=True";
 
         bool isAdding = false;
         string selectedMaHS = "";
